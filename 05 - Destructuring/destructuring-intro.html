@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Destructuring!</title>
-</head>
-<body>
-<script>
-  const person = {
+ 
+const person = {
     first: 'Wes',
     last: 'Bos',
     country: 'Canada',
@@ -14,6 +7,12 @@
     twitter: '@wesbos'
   };
 
+//const first = person.first;
+//const last = person.last;
+
+
+  // give me a variable called first another one called last and another one called twitter
+  // from the person object :
   const { first, last, twitter } = person;
 
   const wes = {
@@ -32,9 +31,12 @@
 
   const { twitter: tweet, facebook: fb } = wes.links.social;
 
-  const settings = { width: 300, color: 'black' }  // height, fontSize
-  const { width = 100, height = 100, color = 'blue', fontSize = 25} = settings;
+  console.log(tweet);
+  console.log(fb);
 
-</script>
-</body>
-</html>
+  const settings = { width: 300, color: 'black' }  // height, fontSize
+  const { width = 100, height = 100, color = 'blue', fontSize = 25 } = settings;
+  
+  console.log(color);
+  console.log(width);
+  console.log(height);

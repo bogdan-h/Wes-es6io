@@ -1,16 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Template Strings!</title>
-</head>
-<body>
-<script>
-  const name = 'Snickers';
-  const age = 2;
-  const sentence = `My dog ${name} is ${age * 7} years old.`;
-  console.log(sentence);
 
-</script>
+  <style> 
+    .hl {
+      background: yellow;
+    }
+  </style>
+
+</head>
+
+<body>
+  <script>
+    const name = 'Snickers';
+    var age = 2;
+    var dog = 'dog';
+    function dogAge(strings, ...info) {
+      if (info[2] < 0) {
+        info[0] = 'unborn yet, dog';
+        age = 0;
+      }
+      else if (info[2] < 3) {
+        info[0] = 'puppy\'s';
+      }
+      let fullString = '';
+      strings.forEach(function (currentValue, i) {
+        //fullString += currentValue + (info[i] || '');
+        fullString += `${currentValue} <span contenteditable class='hl'>${(info[i] || '')}</span>`;
+      });
+      return fullString;
+
+    }
+    console.log(dog);
+    const sentence = dogAge`My ${dog} ${name} is ${age} years old.`;
+    console.log(sentence);
+
+    document.body.innerHTML = sentence;
+
+
+  </script>
 </body>
+
 </html>
