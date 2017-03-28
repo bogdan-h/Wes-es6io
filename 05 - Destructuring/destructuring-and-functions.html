@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Destructuring in Action!</title>
-</head>
-<body>
-<script>
+
   function convertCurrency(amount) {
     const converted = {
       USD: amount * 0.76,
@@ -16,13 +9,22 @@
     return converted;
   }
 
+const money = convertCurrency(100);
+
+console.log(money.AUD);
+console.log(money.MEX);
+
+
+const { MEX, USD, GBP, AUD } = convertCurrency(200);
+console.log(USD);
+console.log(AUD);
+console.log(MEX);
+
+
   function tipCalc({ total = 100, tip = 0.15, tax = 0.13 } = {}) {
     return total + (tip * total) + (tax * total);
   }
 
   const bill = tipCalc({ tip: 0.20, total: 200 });
   console.log(bill);
-
-</script>
-</body>
-</html>
+  console.log(tipCalc());
