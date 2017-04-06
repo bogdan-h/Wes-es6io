@@ -1,0 +1,7 @@
+- talking about destructuring !
+
+
+- the spread operator
+    - ...  <- this is it
+    - in front an array (any iterable) - evrything that can be iterated with a "for-of" loop : array, strings, dom notes, maps , sets etc.
+    - 

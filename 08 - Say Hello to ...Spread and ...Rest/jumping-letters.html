@@ -30,6 +30,15 @@
   <h2 class="jump">SPREADS!</h2>
 
 <script>
+   const letters = document.querySelector('.jump');
+  const res = spanWrap(letters.textContent);
+  console.log(res);
+
+  letters.innerHTML = res;
+
+   function spanWrap(word){
+     return [...word].map((value, index, array)=>`<span>${value}</span>`).join('');
+   }
   
 </script>
 </body>
