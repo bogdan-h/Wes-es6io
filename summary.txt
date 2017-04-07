@@ -4,4 +4,8 @@
 - the spread operator
     - ...  <- this is it
     - in front an array (any iterable) - evrything that can be iterated with a "for-of" loop : array, strings, dom notes, maps , sets etc.
+    - if we need to convert a node list into an array there are 2 possibilities : 
+        1. use Array.from ( an iterable object )
+        2. use the spread operator like this : [...nodeList]
+    
     - 
